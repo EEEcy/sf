@@ -1,0 +1,112 @@
+### Get all books
+GET http://localhost:8000/books HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Get a book by ID
+GET http://localhost:8000/books/1 HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Add a new book
+POST http://localhost:8000/books HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Introduction to FastAPI",
+    "author": "John Doe",
+    "year": 2023,
+    "description": "A beginner's guide to building APIs with FastAPI."
+}
+
+###
+
+### Update a book by ID
+PUT http://localhost:8000/books/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "Advanced FastAPI",
+    "author": "Jane Smith",
+    "year": 2024,
+    "description": "An advanced guide to FastAPI features."
+}
+
+###
+
+### Delete a book by ID
+DELETE http://localhost:8000/books/1 HTTP/1.1
+Content-Type: application/json
+
+
+### Get all reviews for a specific book
+GET http://localhost:8000/books/2/reviews HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Add a new review to a specific book
+POST http://localhost:8000/books/2/reviews HTTP/1.1
+Content-Type: application/json
+
+{
+    "review": "A wonderful and insightful read!"
+}
+
+###
+
+### Update an existing review for a specific book
+PUT http://localhost:8000/books/1/reviews/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "review": "An updated review: Even better upon a second read."
+}
+
+###
+
+### Delete a review for a specific book
+DELETE http://localhost:8000/books/1/reviews/1 HTTP/1.1
+Content-Type: application/json
+
+
+
+###
+
+### Get book recommendation
+GET http://localhost:8000/ai/introduction/2 HTTP/1.1
+Content-Type: application/json
+
+### Add a book to ChromaDB
+POST http://localhost:8000/chroma/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "3",
+    "title": "The Art of FastAPI",
+    "description": "A comprehensive guide to building APIs with FastAPI and Python."
+}
+
+
+###
+
+### Search for similar books in ChromaDB
+GET http://localhost:8000/chroma/similarities?query=FastAPI&distance_threshold=1.0 HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Search for similar books with AI-generated summary
+GET http://localhost:8000/chroma/summary?query=FastAPI&distance_threshold=1.0 HTTP/1.1
+Content-Type: application/json
+
+###
+
+### Delete a book from ChromaDB
+DELETE http://localhost:8000/chroma/100 HTTP/1.1
+Content-Type: application/json
+
+
+
