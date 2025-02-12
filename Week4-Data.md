@@ -156,7 +156,7 @@ Execute the below sequentially:
    ```ini
    sqlalchemy.url = sqlite:///./app.db
    ```
-- Create the migration:
+- Create the migrations:
    ```bash
    alembic revision --autogenerate -m "Create books and reviews tables"
    ```
