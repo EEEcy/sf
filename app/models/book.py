@@ -15,7 +15,7 @@ class Book(Base):
     reviews = relationship("Review", back_populates="book", cascade="all, delete-orphan")
 
 # Pydantic Models for Request/Response
-class BookBase(BaseModel):
+class BookBase(BaseModel):sss
     title: str
     author: str
     year: int
