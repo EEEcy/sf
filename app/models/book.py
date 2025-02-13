@@ -3,7 +3,7 @@ from app.db.db import Base
 from pydantic import BaseModel, ConfigDict
 from sqlalchemy.orm import relationship
 
-class Book(Base):
+class Book(Base)j:
     __tablename__ = "books"
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String, nullable=False)
